@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rastrea tu envío - TrustGO</title>
+  <link rel="stylesheet" href="/views/rastreo/css/rastreo.css" />
+  <style>
+    .rastreo {
+      max-width: 600px;
+      margin: 4rem auto;
+      text-align: center;
+      padding: 2rem;
+      background: #f4f4f4;
+      border-radius: 16px;
+    }
+
+    .rastreo input {
+      padding: 0.8rem;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .rastreo button {
+      background-color: #2a4ae4;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .rastreo button:hover {
+      background-color: #1c34b3;
+    }
+
+    .resultado {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #e8f0ff;
+      border-left: 4px solid #2a4ae4;
+      border-radius: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">TRUSTGO</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/views/servicios/Servicios.html">Servicios</a></li>
+        <li><a href="rastreo.html">Rastrea tu envío</a></li>
+        <li><a href="/index.html#nosotros">Nosotros</a></li>
+        <li><a href="/views/contacto/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Rastreo -->
+  <section class="rastreo">
+    <h1>Rastrea tu envío</h1>
+    <p>Introduce el código de tu envío para conocer su ubicación actual.</p>
+
+    <input type="text" id="codigoEnvio" placeholder="Ej: TG123456789" />
+    <button onclick="buscarEnvio()">Buscar</button>
+
+    <div class="resultado" id="resultado">
+      <p><strong>Ubicación actual:</strong> Bodega Medellín - En proceso de despacho</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-columns">
+      <div>
+        <h4>Contacto:</h4>
+        <p>contacto@trustgo.com</p>
+        <p>+57 300 000 0000</p>
+        <p>@trustgo</p>
+      </div>
+      <div>
+        <h4>¿Por qué nosotros?</h4>
+        <p>Innovación</p>
+        <p>Seguridad</p>
+        <p>Logística</p>
+      </div>
+      <div>
+        <h4>Otros</h4>
+        <p>Privacidad</p>
+        <p>Términos y condiciones</p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 TRUSTGO. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function buscarEnvio() {
+      const codigo = document.getElementById("codigoEnvio").value.trim();
+      const resultado = document.getElementById("resultado");
+
+      if (codigo === "") {
+        alert("Por favor ingresa un código de envío válido.");
+        return;
+      }
+
+      // Simulación de búsqueda (puedes reemplazar esto con lógica real en el futuro)
+      resultado.style.display = "block";
+      resultado.innerHTML = `
+        <p><strong>Resultado para:</strong> ${codigo}</p>
+        <p><strong>Ubicación actual:</strong> Bodega Medellín - En proceso de despacho</p>
+      `;
+    }
+  </script>
+</body>
+</html>
