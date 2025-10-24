@@ -263,6 +263,25 @@ footer p {
   box-shadow: 0 0 0 2px rgba(42, 74, 228, 0.2);
 }
 
+/* Mensajes de error y feedback */
+.error-msg {
+  color: #b91c1c; /* rojo oscuro */
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  min-height: 1.1em; /* reserva espacio para evitar salto de layout */
+}
+
+.form-feedback {
+  margin: 0.5rem 0 0.5rem 0;
+  font-weight: 600;
+  color: #065f46; /* verde oscuro para exito */
+  min-height: 1.2em;
+}
+
+.form-feedback.error {
+  color: #b91c1c;
+}
+
 html {
   scroll-behavior:smooth;
 }

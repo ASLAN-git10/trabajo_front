@@ -28,26 +28,32 @@
     <h1>Contáctanos</h1>
     <p>¿Tienes dudas, sugerencias o quieres cotizar un envío? Escríbenos.</p>
 
-    <form action="#" method="post" class="formulario">
+    <form action="#" method="post" class="formulario" novalidate>
       <div class="form-group">
         <label for="nombre">Nombre completo</label>
         <input type="text" id="nombre" name="nombre" required class="formulario_entrada"/>
+        <span class="error-msg" id="error-nombre" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
         <label for="correo">Correo electrónico</label>
         <input type="email" id="correo" name="correo" required class="formulario_entrada" />
+        <span class="error-msg" id="error-correo" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
         <label for="telefono">Teléfono</label>
         <input type="tel" id="telefono" name="telefono" required class="formulario_entrada"/>
+        <span class="error-msg" id="error-telefono" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
         <label for="mensaje">Mensaje</label>
         <textarea id="mensaje" name="mensaje" rows="5" required class="formulario_entrada"></textarea>
+        <span class="error-msg" id="error-mensaje" aria-live="polite"></span>
       </div>
+
+      <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
 
       <button type="submit" class="btn">Enviar mensaje</button>
     </form>
